@@ -1,0 +1,20 @@
+form a {
+	margin-left: 5px;
+}
+
+.loading-spinner {
+	margin-top: 80px;
+	text-align: center;
+}
+
+.no-posts-message {
+	text-align: center;
+	margin-top: 80px;
+	font-size: 20px;
+	color: #ccc;
+}
+
+.to-right {
+	display: inline-block;
+	float: right;
+}
