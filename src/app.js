@@ -9,6 +9,7 @@ import rootReducer from './reducers/index';
 import App from './components/App';
 import Posts from './components/Posts';
 import PostNew from './components/PostNew';
+// import FormTest from './components/FormTest';
 import PostShow from './components/PostShow';
 
 const store = createStore(
