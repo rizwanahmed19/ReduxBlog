@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {fetchPost, deletePost} from '../actions/index';
+import {fetchPost, deletePost, nullPost} from '../actions/index';
 import Loader from 'halogen/PulseLoader';
 import {Link} from 'react-router';
 
@@ -13,6 +13,10 @@ class PostShow extends Component {
 
 	componentWillMount(){
 		this.props.fetchPost(this.props.params.id)
+	}
+
+	componentWillUnmount(){
+		this.props.nullPost();
 	}
 
 	onDelete(){
@@ -56,4 +60,4 @@ function mapStateToProps(state){
 	}
 }
 
-export default connect(mapStateToProps, {fetchPost, deletePost})(PostShow);
+export default connect(mapStateToProps, {fetchPost, deletePost, nullPost})(PostShow);

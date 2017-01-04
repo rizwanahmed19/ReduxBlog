@@ -4,6 +4,7 @@ export const FETCH_POSTS = 'FETCH_POSTS';
 export const CREATE_POST = 'CREATE_POST';
 export const FETCH_POST = 'FETCH_POST';
 export const DELETE_POST = 'DELETE_POST';
+export const NULL_POST = 'NULL_POST';
 
 const ROOT_URL = 'http://reduxblog.herokuapp.com/api'
 const API_KEY = '?key=rixwan19@gmail.com';
@@ -41,5 +42,11 @@ export function deletePost(id){
 	return {
 		type: DELETE_POST,
 		payload: request
+	}
+}
+
+export function nullPost(){
+	return {
+		type: NULL_POST
 	}
 }
